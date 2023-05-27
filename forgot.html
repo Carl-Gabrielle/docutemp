@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel = "stylesheet" href =  "https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/secure.png">
+    <title>Forgot Password</title>
+</head>
+<style>
+    /* *{
+        border: 1px  red dashed;
+    } */
+    body{
+        overflow: hidden;
+    }
+    .card{
+        padding: 30px;
+    }
+    .forgot {
+            padding: 50px;
+        }
+         @media (max-width: 767px) {
+            .forgot .card {
+                margin-top: 2rem;
+            }
+
+            .forgot h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .forgot .btn {
+                width: 100%;
+            }
+            .forgot .align-items-end {
+                padding-top: 1rem;
+            }
+        }
+</style>
+
+    <section class="forgot pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 mt-5 pt-5 justify-content-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="text-center">Forgot Password?</h1>
+                            <!-- Function for js -->
+                            <form onsubmit="validateForm(); return false;">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary w-25">Submit</button>
+                                </div>
+                            </form>
+                            <div class="pt-2 align-items-end">
+                                <a href="login.html">
+                                    <button type="button" class="btn btn-outline-dark"> <i class="fas fa-arrow-left me-2"></i> Go back</button>
+                                </a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="confirmationModalLabel">Check Your Email for Password Recovery</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><i class="fas fa-check-circle" style="color:aquamarine"></i>  Password recovery instructions have been sent to your email address.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function validateForm() {
+            var emailInput = document.getElementById('email').value;
+            if (emailInput.trim() === '') {
+                return; // condition if the email is empty it will not proceed to the description of the modal
+            }
+            $('#confirmationModal').modal('show'); // shows the confirmation modal
+        }
+    </script>
+</body>
+</html>

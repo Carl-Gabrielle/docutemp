@@ -1,0 +1,214 @@
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar {
+    background-image: linear-gradient(to left, #265e8c, #3ddfb7);
+    padding: 0 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+.navbar-brand img{
+    height: 40px;
+    padding-left: 50px ;
+}
+.navbar-nav  li {
+    padding: 0 10px;
+}
+.navbar-nav  li  a{
+    font-weight: 600;
+    float: right;
+    text-align: left;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+.card{
+    background-color: rgba(255, 255, 255,0.5);
+}
+.front{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+    padding-top: 5%;
+    display: flex;
+    min-height: 100vh;
+}
+.fw-bold {
+    font-weight: 700!important;
+    font-size:  70px;
+}
+h4{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.svg-container{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+}
+.forgot{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+    display: flex;
+    min-height: 100vh;
+}
+.grid{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+    display: flex;
+    min-height: 115vh;
+}
+.registration{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+    display: flex;
+    min-height: 100vh;
+}
+svg{
+    background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+}
+.text-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .animated-text {
+    font-size: 36px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: typing 3s steps(40) infinite;
+  }
+  
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  .animated-main-text {
+    animation: bounce 1s ease-in-out infinite;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .transition-icons p {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .transition-icons p i {
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .transition-icons p{
+    cursor: context-menu;
+  }
+  .transition-icons p:hover i {
+    transform: translateX(5px);
+    }
+    .choose-account{
+        background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+        display: flex;
+        min-height: 100vh;
+    }
+    /* animated option 1 
+    .animate-main-img {
+  animation: scale 0.5s infinite alternate;
+}
+
+@keyframes scale {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+*/
+    .animate-main-img {
+        animation: scale 0.5s infinite alternate;
+    }
+    
+    @keyframes scale {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+    
+
+    /* try glass morph */
+    .about{
+      width: 190px;
+      height: 254px;
+      transition: all 0.2s;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .card-inner {
+      width: inherit;
+      height: inherit;
+      background: rgba(26, 143, 161, 0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .for-hovers:hover {
+      transform: scale(1.04) rotate(1deg);
+    }
+    
+    .circle-container {
+      position: absolute;
+      top: -25px;
+      left: -25px;
+      right: -25px;
+      bottom: -25px;
+      z-index: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .circle {
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      animation: move-up6 2s ease-in infinite alternate-reverse;
+    }
+    
+    .circle:nth-child(1) {
+      animation-name: move-down1;
+    }
+    
+    @keyframes move-up6 {
+      to {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes move-down1 {
+      to {
+        transform: translateY(10px);
+      }
+    }
+    @media (max-width: 991.98px) { /* Breakpoint: md */
+      .grid .col-md-4 {
+          flex-basis: 50%;
+          max-width: 50%;
+      }
+  }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/registration.jpg">
+    <title>  Registration </title>
+    <style>    
+        body {
+            font-family: 'Varela Round', sans-serif;
+        }
+        .modal-confirm {        
+            color: #636363;
+            width: 325px;
+            font-size: 14px;
+        }
+        .modal-confirm .modal-content {
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        .modal-confirm .modal-header {
+            border-bottom: none;   
+            position: relative;
+        }
+        .modal-confirm h4 {
+            text-align: center;
+            font-size: 26px;
+            margin: 30px 0 -15px;
+        }
+        .modal-confirm .form-control, .modal-confirm .btn {
+            min-height: 40px;
+            border-radius: 3px; 
+        }
+        .modal-confirm .close {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }   
+        .modal-confirm .modal-footer {
+            border: none;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 13px;
+        }   
+        .modal-confirm .icon-box {
+            color: #fff;        
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            top: -70px;
+            width: 95px;
+            height: 95px;
+            border-radius: 50%;
+            z-index: 9;
+            background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .modal-confirm .icon-box i {
+            font-size: 58px;
+            position: relative;
+            top: 3px;
+        }
+        .modal-confirm.modal-dialog {
+            margin-top: 80px;
+        }
+        .modal-confirm .btn {
+            color: #fff;
+            border-radius: 4px;
+            background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+            text-decoration: none;
+            transition: all 0.4s;
+            line-height: normal;
+            border: none;
+        }
+        .modal-confirm .btn:hover, .modal-confirm .btn:focus {
+            background: linear-gradient(to bottom right, #71e5be, #22a6b3);
+            outline: none;
+        }
+        .trigger-btn {
+            display: inline-block;
+            margin: 100px auto;
+        }
+		.custom-footer-padding {
+    padding: 20px;
+}
+.card{
+        padding: 30px;
+        padding-bottom: 15px;
+    }
+    .registration {
+            padding: 40px;
+        }
+        
+        @media (max-width: 767px) {
+            body{
+                overflow: visible;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="registration">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-6 mt-3">
+                    <!-- Logo with image  -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center">Registration Form</h3>
+                            <form onsubmit="validateForm(); return false;">
+                                <div class="form-group mb-2">
+                                    <label for="name" class="mb-1">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required> 
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="email" class="mb-1">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="password" class="mb-1">Password</label>
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                                </div>
+                                <div class="form-group pb-3 mb-2">
+                                    <label for="confirm-password" class="mb-1">Confirm Password</label>
+                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
+                                </div>
+                                <div class="text-center pb-2">
+                                    <button type="submit" class="btn btn-primary w-50">Register</button>
+                                </div>
+
+                                <p class="text-center">Already have an account? <a href="login.html" class="text-decoration-none">Login here</a></p>
+                                <a href="login.html">
+                                    <button type="button" class="btn btn-outline-dark"> <i class="fas fa-arrow-left me-2"></i> Go back</button>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>                
+                    <h4 class="modal-title w-100">Awesome!</h4>    
+                </div>
+                <div class="modal-body">
+					<p class="text-center">You have successfully registered with DocuBoot!</p>
+				</div>
+
+				<div class="modal-footer custom-footer-padding">
+					<a href="login.html" class="btn btn-success btn-block p-3">Proceed to Login <i class="fas fa-sign-in-alt"></i></a>
+				</div>
+				
+				<!-- OK FOOTER  -->
+                <!-- <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            
+            if (name === '' || email === '' || password === '' || confirmPassword === '') {
+                // If any of the fields are empty, show an alert message
+                alert('Please fill in all fields');
+            } else {
+                // If all fields are filled, display the modal
+                $('#myModal').modal('show');
+            }
+        }
+    </script>
+</body>
+</html>
